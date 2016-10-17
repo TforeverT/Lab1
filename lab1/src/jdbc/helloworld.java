@@ -1,7 +1,7 @@
 package jdbc;
 
 import java.util.Scanner;
-public class helloworld 
+public class lab1 
 {
 	public static void pd(String a)
 	{
