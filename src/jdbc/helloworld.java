@@ -3,14 +3,17 @@ package jdbc;
 import java.util.Scanner;
 public class helloworld 
 {
+	//检验表达式是否合法，输出表达式信息
 	public static void pd(String a)
 	{
 		int x=0;
 		int l=a.length();
 		int y=0;
+		//遍历字符串,x=1不合法
 		for (int i=0; i<l; i++)
 		{
 			char b=a.charAt(i);
+			//是数字
 			if ((b>='0')&&(b<='9'))
 				y++;
 			else
@@ -161,14 +164,18 @@ public class helloworld
     public static void main(String[] args)
     {
     	Scanner in=new Scanner(System.in);
+    	//标志，避免使用while true
         int x=0;
     	String a=null;
+    	//没用到
     	String b=null;
     	a=new String();
+    	//死循环
     	while(x==0)
     	{
-    	  
+    		//n用来保存输入的字符串
     		String n=in.nextLine();
+    		//输入的不是命令
     	    if (n.charAt(0)!='!')
     	    {
     	    	a=n;
@@ -176,8 +183,10 @@ public class helloworld
             }
     	    else
     	    {
+    	    	//化简命令，a为表达式，n为表达式
     	    	if (n.charAt(1)=='s')
     	    		simplify(a,n);
+    	    	//求导命令
     	    	else
     	    		derivative(a,n.charAt(4));
     	    }
